@@ -219,7 +219,7 @@ elif selected == "Inference":
                     unsafe_allow_html=True)
                 st.markdown("#### IndoBERT")
                 result_ib = ib_model.predict(input_text)
-                st.write(f"**Sentiment:** {result_ib['label']} (Score: {result_ib['score']:.2f})")
+                st.write(f"**Sentiment:** {result_ib['label']} (Score: {result_ib['score']})")
                 st.markdown("</div>", unsafe_allow_html=True)
         elif model_choice == "Naive Bayes":
             st.markdown(
