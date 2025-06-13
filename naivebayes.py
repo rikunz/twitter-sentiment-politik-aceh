@@ -4,8 +4,8 @@ from nltk.tokenize import word_tokenize
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from nltk.corpus import stopwords
 import pandas as pd
-
 import nltk
+nltk.download('punkt_tab')
 try:
     nltk.data.find('corpora/stopwords')
 except LookupError:
