@@ -5,6 +5,18 @@ from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 from nltk.corpus import stopwords
 import pandas as pd
 
+import nltk
+try:
+    nltk.data.find('corpora/stopwords')
+except LookupError:
+    nltk.download('stopwords')
+
+# Pastikan stopwords bahasa Indonesia tersedia
+try:
+    stopwords.words('indonesian')
+except OSError:
+    nltk.download('stopwords')
+
 class NaiveBayes:
     def __init__(self, model_path, vectorizer_path=None, normalisasi_path=None):
         from joblib import load
