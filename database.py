@@ -18,6 +18,8 @@ class Database:
     
     def head(self, n: int = 5):
         """Returns the first n rows of the DataFrame."""
+        if n == 0:
+            return self.data
         return self.data.head(n)
     
     def exact_filter(self, value:str):
